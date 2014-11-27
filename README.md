@@ -4,6 +4,14 @@ Emacs plugin for [Livedown](https://github.com/shime/livedown).
 
 ## Installation
 
+First make sure you have [node](http://nodejs.org/) with [npm](https://www.npmjs.org/) installed.
+
+Then install `livedown` with
+
+    $ npm install -g livedown
+
+Then install this plugin with
+
 ```shell
 git clone git@github.com:shime/emacs-livedown.git ~/.emacs.d/emacs-livedown
 cat <<EOF >> ~/.emacs.d/init.el
