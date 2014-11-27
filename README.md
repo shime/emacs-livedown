@@ -2,6 +2,8 @@
 
 Emacs plugin for [Livedown](https://github.com/shime/livedown).
 
+![](https://raw.githubusercontent.com/shime/livedown-demos/master/emacs.gif)
+
 ## Installation
 
 First make sure you have [node](http://nodejs.org/) with [npm](https://www.npmjs.org/) installed.
