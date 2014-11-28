@@ -3,7 +3,7 @@
 ;; Copyright (C) 2014 Hrvoje Simic
 
 ;; Author: Hrvoje Simic <shime.ferovac@gmail.com>
-;; Version: 0.0.0
+;; Version: 1.0.0
 ;; Keywords: markdown, preview, live
 ;; URL: https://github.com/shime/emacs-livedown
 
