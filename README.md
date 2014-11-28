@@ -42,6 +42,12 @@ M-x livedown:preview
 M-x livedown:kill
 ```
 
+Or for bonus points, define a keybinding with
+
+```elisp
+(global-set-key (kbd "C-M-m") 'livedown:preview)
+```
+
 ## License
 
 MIT
