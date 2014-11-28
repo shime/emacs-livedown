@@ -28,11 +28,14 @@ This plugin uses some configurable variables, with the following defaults
 
 ```elisp
 (custom-set-variables
- '(livedown:open t)     ; automatically open the browser window
- '(livedown:port 1337)) ; port for livedown server
+ '(livedown:autostart nil) ; automatically open preview when opening markdown files 
+ '(livedown:open t)        ; automatically open the browser window
+ '(livedown:port 1337))    ; port for livedown server
 ```
 
-You can also call the open/kill functions manually with
+Make sure to place them before the `require` line in your `init.el`.
+
+You can also call the functions manually with
 
 ```elisp
 M-x livedown:preview

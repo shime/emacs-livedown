@@ -26,6 +26,11 @@
   :type 'boolean
   :group 'livedown)
 
+(defcustom livedown:autostart nil
+  "Auto-open previews when opening markdown files."
+  :type 'boolean
+  :group 'livedown)
+
 (defun livedown:preview ()
     "Preview the current file in livedown."
       (interactive)
@@ -42,7 +47,9 @@
              (format "livedown stop --port %s &"
                             livedown:port)))
 
-(eval-after-load 'markdown-mode '(livedown:preview))
+(if livedown:autostart
+  (eval-after-load 'markdown-mode '(livedown:preview)))
+
 (add-hook 'kill-emacs-query-functions (lambda () (livedown:kill)))
 
 (provide 'livedown)
