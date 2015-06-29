@@ -33,12 +33,20 @@
 
 (defun livedown:preview ()
     "Preview the current file in livedown."
-      (interactive)
-        (call-process-shell-command
-             (format "livedown start %s --port %s %s &"
-                            (shell-quote-argument (buffer-file-name))
+    (interactive)
+
+   (call-process-shell-command
+             (format "livedown stop --port %s &"
+                            livedown:port))
+
+        (start-process-shell-command
+            (format "emacs-livedown")
+            (format "emacs-livedown-buffer")
+            (format "livedown start %s --port %s %s "
+                            buffer-file-name
                             livedown:port
-                            (if livedown:open "--open" ""))))
+                            (if livedown:open "--open" "")))
+        (print (format "%s rendered @ %s" buffer-file-name livedown:port) (get-buffer "emacs-livedown-buffer")))
 
 (defun livedown:kill ()
     "Stops the livedown process."
