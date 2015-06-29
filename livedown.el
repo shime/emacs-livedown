@@ -16,39 +16,25 @@
   :group 'livedown
   :prefix "livedown:")
 
+(defcustom livedown:port 1337
+  "Port on which livedown server will run."
+  :type 'integer
+  :group 'livedown)
 
 (defcustom livedown:open t
   "Open browser automatically."
   :type 'boolean
   :group 'livedown)
 
-(defcustom livedown:port 1337
-  "Port on which livedown server will run."
-  :type 'integer
-  :group 'livedown)
-
-;(defcustom livedown:open t
-;  "Open browser automatically."
-;  :type 'boolean
-;  :group 'livedown)
-
 (defcustom livedown:autostart nil
   "Auto-open previews when opening markdown files."
   :type 'boolean
   :group 'livedown)
 
-(defun livedown:kill ()
-    "Stops the livedown process."
-      (interactive)
-        (call-process-shell-command
-             (format "livedown stop --port %s &"
-                            livedown:port)))
-
 (defun livedown:preview ()
     "Preview the current file in livedown."
     (interactive)
 
-    ;assert port is free
    (call-process-shell-command
              (format "livedown stop --port %s &"
                             livedown:port))
@@ -62,8 +48,12 @@
                             (if livedown:open "--open" "")))
         (print (format "%s rendered @ %s" buffer-file-name livedown:port) (get-buffer "emacs-livedown-buffer")))
 
-
-
+(defun livedown:kill ()
+    "Stops the livedown process."
+      (interactive)
+        (call-process-shell-command
+             (format "livedown stop --port %s &"
+                            livedown:port)))
 
 (if livedown:autostart
   (eval-after-load 'markdown-mode '(livedown:preview)))
