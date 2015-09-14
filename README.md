@@ -15,7 +15,7 @@ Then install `livedown` with
 Then install this plugin with
 
 ```shell
-git clone git@github.com:shime/emacs-livedown.git ~/.emacs.d/emacs-livedown
+git clone https://github.com/shime/emacs-livedown.git ~/.emacs.d/emacs-livedown
 cat <<EOF >> ~/.emacs.d/init.el
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/emacs-livedown"))
 (require 'livedown)
