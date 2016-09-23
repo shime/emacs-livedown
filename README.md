@@ -2,7 +2,7 @@
 
 Emacs plugin for [Livedown](https://github.com/shime/livedown).
 
-![](https://twobucks.co/assets/emacs-livedown.gif)
+![](https://raw.githubusercontent.com/shime/livedown-demos/master/emacs.gif)
 
 ## Installation
 
