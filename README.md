@@ -30,7 +30,8 @@ This plugin uses some configurable variables, with the following defaults
 (custom-set-variables
  '(livedown:autostart nil) ; automatically open preview when opening markdown files 
  '(livedown:open t)        ; automatically open the browser window
- '(livedown:port 1337))    ; port for livedown server
+ '(livedown:port 1337)     ; port for livedown server
+ '(livedown:browser nil))  ; browser to use
 ```
 
 Make sure to place them before the `require` line in your `init.el`.
