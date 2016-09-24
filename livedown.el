@@ -54,16 +54,17 @@
                             (if livedown:open "--open" "")))
         (print (format "%s rendered @ %s" buffer-file-name livedown:port) (get-buffer "emacs-livedown-buffer")))
 
-(defun livedown:kill ()
+(defun livedown:kill (&optional async)
     "Stops the livedown process."
       (interactive)
-        (call-process-shell-command
+        (setq stop-livedown (if async 'async-shell-command 'call-process-shell-command))
+        (funcall stop-livedown
              (format "livedown stop --port %s &"
                             livedown:port)))
 
 (if livedown:autostart
   (eval-after-load 'markdown-mode '(livedown:preview)))
 
-(add-hook 'kill-emacs-query-functions (lambda () (livedown:kill)))
+(add-hook 'kill-emacs-query-functions (lambda () (livedown:kill t)))
 
 (provide 'livedown)
