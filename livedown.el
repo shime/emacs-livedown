@@ -1,8 +1,8 @@
 ;;; livedown.el --- Realtime Markdown previews for Emacs.
 
-;; Copyright (C) 2014 Hrvoje Simic
+;; Copyright (C) 2014-2016 Hrvoje Simic
 
-;; Author: Hrvoje Simic <shime.ferovac@gmail.com>
+;; Author: Hrvoje Simic <hrvoje@twobucks.co>
 ;; Version: 1.0.0
 ;; Keywords: markdown, preview, live
 ;; URL: https://github.com/shime/emacs-livedown
