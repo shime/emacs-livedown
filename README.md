@@ -28,10 +28,10 @@ This plugin uses some configurable variables, with the following defaults
 
 ```elisp
 (custom-set-variables
- '(livedown:autostart nil) ; automatically open preview when opening markdown files 
- '(livedown:open t)        ; automatically open the browser window
- '(livedown:port 1337)     ; port for livedown server
- '(livedown:browser nil))  ; browser to use
+ '(livedown-autostart nil) ; automatically open preview when opening markdown files
+ '(livedown-open t)        ; automatically open the browser window
+ '(livedown-port 1337)     ; port for livedown server
+ '(livedown-browser nil))  ; browser to use
 ```
 
 Make sure to place them before the `require` line in your `init.el`.
@@ -39,14 +39,14 @@ Make sure to place them before the `require` line in your `init.el`.
 You can also call the functions manually with
 
 ```elisp
-M-x livedown:preview
-M-x livedown:kill
+M-x livedown-preview
+M-x livedown-kill
 ```
 
 Or for bonus points, define a keybinding with
 
 ```elisp
-(global-set-key (kbd "C-M-m") 'livedown:preview)
+(global-set-key (kbd "C-M-m") 'livedown-preview)
 ```
 
 ## License
