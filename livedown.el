@@ -38,6 +38,7 @@
   :type 'boolean
   :group 'livedown)
 
+;;;###autoload
 (defun livedown-preview ()
     "Preview the current file in livedown."
     (interactive)
@@ -56,6 +57,7 @@
                             (if livedown-open "--open" "")))
         (print (format "%s rendered @ %s" buffer-file-name livedown-port) (get-buffer "emacs-livedown-buffer")))
 
+;;;###autoload
 (defun livedown-kill (&optional async)
   "Stops the livedown process."
   (interactive)
