@@ -49,6 +49,14 @@ Or for bonus points, define a keybinding with
 (global-set-key (kbd "C-M-m") 'livedown-preview)
 ```
 
+For additional bonus points, open the preview using the browser with custom command line options
+
+```elisp
+(custom-set-variables
+ '(livedown-browser "'firefox -P livedown --private-window'"))  ; browser to use with custom options
+```
+
+
 ## License
 
 MIT
